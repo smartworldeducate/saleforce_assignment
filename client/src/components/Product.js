@@ -68,6 +68,9 @@ const Product = ({ match, history }) => {
 				</div>
 			)}
 		</section>
+
+	
+
 	);
 };
 

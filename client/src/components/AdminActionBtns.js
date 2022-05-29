@@ -13,6 +13,7 @@ const AdminActionBtns = () => (
 						<i className='fas fa-plus'> Add Category</i>
 					</button>
 				</div>
+				
 
 				<div className='col-md-4 my-1'>
 					<button
@@ -20,7 +21,7 @@ const AdminActionBtns = () => (
 						data-toggle='modal'
 						data-target='#addFoodModal'
 					>
-						<i className='fas fa-plus'> Add Food</i>
+						<i className='fas fa-plus'> Add Product</i>
 					</button>
 				</div>
 

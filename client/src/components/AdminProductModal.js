@@ -14,6 +14,7 @@ const AdminProductModal = () => {
 	const { loading } = useSelector(state => state.loading);
 	const { successMsg, errorMsg } = useSelector(state => state.messages);
 	const { categories } = useSelector(state => state.categories);
+	
 
 	const dispatch = useDispatch();
 	/****************************
@@ -84,6 +85,7 @@ const AdminProductModal = () => {
 			formData.append('productDesc', productDesc);
 			formData.append('productPrice', productPrice);
 			formData.append('productCategory', productCategory);
+			// formData.append('productBrand', productBrand);
 			formData.append('productQty', productQty);
 
 			dispatch(createProduct(formData));
@@ -93,6 +95,7 @@ const AdminProductModal = () => {
 				productDesc: '',
 				productPrice: '',
 				productCategory: '',
+				// productBrand: '',
 				productQty: '',
 			});
 		}
@@ -107,7 +110,7 @@ const AdminProductModal = () => {
 				<div className='modal-content'>
 					<form onSubmit={handleProductSubmit}>
 						<div className='modal-header bg-warning text-white'>
-							<h5 className='modal-title'>Add Food</h5>
+							<h5 className='modal-title'>Add Product</h5>
 							<button className='close' data-dismiss='modal'>
 								<span>
 									<i className='fas fa-times'></i>
@@ -216,6 +219,7 @@ const AdminProductModal = () => {
 											/>
 										</div>
 									</div>
+									
 								</Fragment>
 							)}
 						</div>

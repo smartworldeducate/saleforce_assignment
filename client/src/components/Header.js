@@ -15,9 +15,17 @@ const Header = ({ history }) => {
 	// views
 	const showNavigation = () => (
 		<nav className='navbar navbar-expand-lg navbar-light bg-light'>
-			<Link to='/' className='navbar-brand'>
-				Logo
-			</Link>
+			
+			<div className="mail-service pl-5">
+          <i className=" fa fa-envelope" />
+          hello.colorlib@gmail.com
+        </div>
+		<div className="phone-service pl-5">
+          <i className=" fa fa-phone" />
+          +65 11.188.888
+        </div>
+		
+
 			<button
 				className='navbar-toggler'
 				type='button'
@@ -31,21 +39,45 @@ const Header = ({ history }) => {
 			</button>
 
 			<div className='collapse navbar-collapse' id='navbarTogglerDemo02'>
-				<ul className='navbar-nav ml-auto mt-2 mt-lg-0'>
+				<ul className='navbar-nav ml-auto mt-2 mt-lg-0 bg-white'>
+				<div className="lan-selector">
+          <select
+            className="language_drop"
+            name="countries"
+            id="countries"
+            style={{ width: 100 }}
+          >
+            <option
+              value="yt"
+              data-image="./images/flag-1.jpg"
+              data-imagecss="flag yt"
+              data-title="English"
+            />
+            English
+            <option
+              value="yu"
+              data-image="./images/flag-2.jpg"
+              data-imagecss="flag yu"
+              data-title="Bangladesh"
+            >
+              German{" "}
+            </option>
+          </select>
+        </div>
 					{!isAuthenticated() && (
 						<Fragment>
-							<li className='nav-item'>
+							<li>
 								<Link to='/' className='nav-link'>
 									<i className='fas fa-home'></i> Home
 								</Link>
 							</li>
-							<li className='nav-item'>
-								<Link to='/shop' className='nav-link'>
+							<li >
+								<Link to='/Shope' className='nav-link'>
 									<i className='fas fa-shopping-bag'></i> Shop
 								</Link>
 							</li>
 							<li
-								className='nav-item mr-2'
+								
 								style={{ position: 'relative' }}
 							>
 								<Link to='/cart' className='nav-link'>
@@ -62,12 +94,12 @@ const Header = ({ history }) => {
 									</span>
 								</Link>
 							</li>
-							<li className='nav-item'>
-								<Link to='/signup' className='nav-link'>
+							<li >
+								<Link to='/signup' className='mt-5' >
 									<i className='fas fa-edit'></i> Signup
 								</Link>
 							</li>
-							<li className='nav-item'>
+							<li >
 								<Link to='/signin' className='nav-link'>
 									<i className='fas fa-sign-in-alt'></i>{' '}
 									Signin
@@ -91,7 +123,7 @@ const Header = ({ history }) => {
 							<li className='nav-item'>
 								<Link
 									to='/admin/dashboard'
-									className='nav-link'
+									className='btn btn-sm bg-light'
 								>
 									<i className='fas fa-home'></i> Dashboard
 								</Link>
@@ -103,7 +135,7 @@ const Header = ({ history }) => {
 						<Fragment>
 							<li className='nav-item'>
 								<button
-									className='btn btn-link text-secondary text-decoration-none pl-0'
+									className='btn btn-sm bg-light text-decoration-none pl-0'
 									onClick={handleLogout}
 								>
 									<i className='fas fa-sign-out-alt'></i>{' '}

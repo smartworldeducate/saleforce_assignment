@@ -2,8 +2,13 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './Header';
-import Home from './Home';
-import Shop from './Shop';
+import Navbar from '../components2/Navbar'
+import Home from '../pages/Home'
+import Contact from '../pages/Contact'
+import Bloge from '../components2/Bloge'
+import BlogeDetail from '../components2/BlogeDetail'
+import Shope from '../pages/Shope';
+import Footer from '../components2/Footer'
 import Cart from './Cart';
 import Product from './Product';
 import Signup from './Signup';
@@ -20,10 +25,14 @@ const App = () => {
 		<BrowserRouter>
 			<Header />
 			<main>
+			<Navbar/>
 				<Switch>
+					<Route exact path='/Contact' component={Contact}/>
+					<Route exact path='/Bloge' component={Bloge}/>
 					<Route exact path='/' component={Home} />
-					<Route exact path='/shop' component={Shop} />
+					<Route exact path='/Shope' component={Shope} />
 					<Route exact path='/cart' component={Cart} />
+					<Route exact path='/BlogeDetail' component={BlogeDetail} />
 					<Route
 						exact
 						path='/product/:productId'
@@ -49,6 +58,7 @@ const App = () => {
 					<Route component={NotFound} />
 				</Switch>
 			</main>
+			<Footer/>
 		</BrowserRouter>
 	);
 };

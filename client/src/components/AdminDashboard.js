@@ -24,6 +24,7 @@ const AdminDashboard = () => {
 			<AdminHeader />
 			<AdminActionBtns />
 			<AdminCategoryModal />
+			
 			<AdminProductModal />
 			<AdminBody />
 		</section>
