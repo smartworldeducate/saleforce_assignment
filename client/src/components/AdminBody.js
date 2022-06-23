@@ -1,16 +1,12 @@
-import React from 'react';
-import Card from './Card';
-// redux
-import { useSelector } from 'react-redux';
+import React from "react";
+import Card from "./Card";
 
 const AdminBody = () => {
-	const { products } = useSelector(state => state.products);
-
-	return (
-		<div className="container">
-			<Card/>
-		</div>
-	);
+  return (
+    <div className="container">
+      <Card />
+    </div>
+  );
 };
 
 export default AdminBody;

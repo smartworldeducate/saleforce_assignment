@@ -19,8 +19,6 @@ const Signin = () => {
   }, [history]);
 
   const [formData, setFormData] = useState({
-    email: "@gmail.com",
-    password: "abc123",
     errorMsg: false,
     loading: false,
   });
@@ -86,10 +84,13 @@ const Signin = () => {
    ***************************/
   const showSigninForm = () => (
     <div className="loginform">
-        <div className="avatar mt-5">
-    <img src="https://www.markuptag.com/images/user-icon.jpg" alt="Avatar" />
-  </div>
-  <h2 >Login</h2>
+      <div className="avatar mt-5">
+        <img
+          src="https://www.markuptag.com/images/user-icon.jpg"
+          alt="Avatar"
+        />
+      </div>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit} noValidate>
         <p>Username</p>
         <input
@@ -114,13 +115,10 @@ const Signin = () => {
         <Link href="#" className="have-not">
           Don’t have an account?
         </Link>
-        
-           <Link to="/signup">Register here</Link>
-        
+
+        <Link to="/signup">Register here</Link>
       </form>
     </div>
-
-   
   );
 
   /****************************
